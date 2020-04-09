@@ -23,7 +23,7 @@ public class BlogDaoImpl implements  BlogDaoInterface
 	try {
 		Connection con = ConnectionManager.getConnection();
 		
-		String sql = "INSERT INTO blog(blogId,blogName ,blogDiscription,postedOn)VALUES(?,?,?,?)";
+		String sql = "INSERT INTO blog(blogId,blogName,blogDiscription,postedOn)VALUES(?,?,?,?)";
 		PreparedStatement st = con.prepareStatement(sql);;
 		
 		
