@@ -20,7 +20,7 @@ public class PlayerDAO
 	{
 		Connection con = ConnectionManager.getConnection();
 		Statement st = con.createStatement();
-		ResultSet rs = st.executeQuery("SELECT * FROM player JOIN skill ON player.skill_id=skill.id");
+		ResultSet rs = st.executeQuery("SELECT * FROM player");
 		while(rs.next())
 		    {			
 				long pid = rs.getLong(1);
