@@ -20,6 +20,7 @@ public class PlayerDAO
 	{
 		Connection con = ConnectionManager.getConnection();
 		Statement st = con.createStatement();
+		Skill skill = null;
 		ResultSet rs = st.executeQuery("SELECT * FROM player");
 		while(rs.next())
 		    {			
@@ -29,11 +30,11 @@ public class PlayerDAO
 				
 				String pCountry = rs.getString(3);	
 				
-				long sid = rs.getLong(4);
+				long sid = skill.getSkillId();
 				
 				//long teamId = rs.getLong(5);
 				
-				String sName = rs.getString(7);
+				String sName = skill.getSkillName();
 				
 				Skill skill = new Skill(sid,sName);
 				
